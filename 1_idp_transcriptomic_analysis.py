@@ -27,11 +27,11 @@ from statsmodels.stats.multitest import multipletests
 from neuromaps import nulls
 
 # ------------------- User input (modify as needed) -------------------
-EXPR_PATH   = '/media/sugai/Sugai2023/pbmc_msn/code_shell_txt/dk308_lh_expr_10027.csv'   # 152×N (rows=ROI)
-TVAL_PATH   = '/media/sugai/Sugai2023/pbmc_msn/fs_processed_files2/msn_8meas_files/group_comparison/ttest_ct_z_ha_la_results.xlsx'
+EXPR_PATH   = 'dk308_lh_expr_10027.csv'   # 152×N (rows=ROI)
+TVAL_PATH   = 'ttest_ct_z_ha_la_results.xlsx'
 TVAL_COL    = 'T'
-ATLAS_PATH  = '/media/sugai/Sugai2023/pbmc_msn/fs_processed_files2/FS_SUBJECTS/fsaverageSubP/parcellation/500.aparc_lh_relabel.nii.gz'
-OUT_DIR     = '/media/sugai/Sugai2023/pbmc_msn/fs_processed_files2/msn_8meas_files/brain_gene'
+ATLAS_PATH  = '500.aparc_lh_relabel.nii.gz'
+OUT_DIR     = 'brain_gene'
 
 # Top-K grid
 K_LIST      = [100, 200, 300]
@@ -43,7 +43,7 @@ STAT_ABS    = True     # True: |rho| two-sided; False: one-sided (by observed di
 SEED        = 1234
 
 # Stability evaluation
-STAB_N      = 500
+STAB_N      = 1000
 STAB_DROP   = 0.10
 SIGN_THR    = 0.75
 
@@ -51,8 +51,8 @@ SIGN_THR    = 0.75
 Q_SPIN_THR  = 0.15     # FDR only within Top-K family
 
 # ORA settings (local GMT + background)
-GOBP_GMT        = '/media/sugai/Sugai2023/pbmc_msn/fs_processed_files2/enrichment_ana/c5.go.bp.v2023.2.Hs.symbols.gmt'
-BACKGROUND_FILE = '/media/sugai/Sugai2023/pbmc_msn/fs_processed_files2/enrichment_ana/expr_genes.txt'
+GOBP_GMT        = 'enrichment_ana/c5.go.bp.v2023.2.Hs.symbols.gmt'
+BACKGROUND_FILE = 'enrichment_ana/expr_genes.txt'
 MIN_GS_SIZE     = 5
 MAX_GS_SIZE     = 1000
 
